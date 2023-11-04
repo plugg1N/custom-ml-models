@@ -38,7 +38,7 @@ def h(w, b0) -> list:
 # Calculate MSE
 def cost(w, b0) -> float:
     result = 0
-    
+
     for i in range(len(X)):
         result += (y[i] - h(w, b0)[i]) ** 2
 
@@ -47,7 +47,7 @@ def cost(w, b0) -> float:
 
 # Tuning (!NOT GRADIENT DESCENT)
 for i in range(7_000):
-    
+
     # Cost without tuning
     c = cost(w, b0)
 
@@ -62,4 +62,4 @@ for i in range(7_000):
     # Calculate cost and print
     print(f"cost = {cost(w, b0)}, w = {w}, b = {b0}")
 
-        
+
