@@ -32,7 +32,7 @@ class linear_regression():
 
     def fit(self, X, Y):
         # num of examples, num of features
-        self.m, self.n = np.array(X).shape
+        self.m, self.n = X.shape
 
 
         # weights vector
@@ -42,21 +42,22 @@ class linear_regression():
         self.b0 = 0
 
         # init training data
-        self.X, self.Y = np.array(X), np.array(Y)
+        self.X = X
+        self.Y = Y
 
         # perform Gradient Descent
-        for _ in range(self.iterations):
-            self.__update_weights()
+        for i in range(self.iterations):
+            self._update_weights()
 
         return self
 
 
-    def __update_weights(self):
+    def _update_weights(self):
         # get predictions
         y_pred = self.predict(self.X)
 
         # calculate gradients
-        dw = - (2 * self.X.T.dot(self.Y - y_pred)) / self.m
+        dw = - (2 * (self.X.T).dot(self.Y - y_pred)) / self.m
         db = - 2 * np.sum(self.Y - y_pred) / self.m
 
         # update weights

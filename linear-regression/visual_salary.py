@@ -1,18 +1,18 @@
-from linear_regression import linear_regression
+from src.linear_regression import linear_regression
 import pandas as pd
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 import numpy as np
 
 
-# Prepare data
+## Prepare data
 data = pd.read_csv('references/salary_data.csv')
 
-# Reshape to fit the model (cause X.shape returns "(24, )" )
+## Reshape to fit the model (cause X.shape returns "(24, )" )
 X = np.array(data['YearsExperience']).reshape(len(data), 1)
 y = np.array(data['Salary']).reshape(len(data), 1)
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=69)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=69)
 
 
 # Train a model
@@ -33,6 +33,5 @@ plt.xlabel(data.columns[0])
 plt.ylabel(data.columns[1])
 
 
-plt.savefig('salary_data_visualization.png')
-print("Plot was saved successfully!")
+plt.show()
 
