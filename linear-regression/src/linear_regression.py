@@ -23,7 +23,6 @@ GitHub: plugg1N
 import math
 import numpy as np
 
-
 class linear_regression():
     def __init__(self, learning_rate = 1e-3, iterations = 3000):
         self.learning_rate = learning_rate
@@ -46,7 +45,7 @@ class linear_regression():
         self.Y = Y
 
         # perform Gradient Descent
-        for i in range(self.iterations):
+        for _ in range(self.iterations):
             self._update_weights()
 
         return self
