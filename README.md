@@ -60,7 +60,7 @@ Much harder than this, right?
 
 $$ \Large MSE = \frac {1} {m} \sum \limits_{i=1}^m (y - y_{pred})^2  $$
 
-But getting gradients is simpler. Overall, logistic-regression implementation was way harder than I expected. I am greatful for finishing development. **The bad, thing is that**
+But getting gradients is simpler. Overall, logistic-regression implementation was way harder than I expected. I am greatful for finishing development. **The bad thing is that**
 accuracy is rather low on `breast_cancer` dataset and model works slower than expected. It is slower, because I was trying to get the job done, not to make
 implementation better, than sklearn did.
 
