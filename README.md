@@ -18,7 +18,7 @@ what happens under the hood of each model individually. This might help getting 
 The simplest ones to implement and understand. I, probably, won't program ridge, 'cause it pretty much the same anyway. The hardest part of linear models is gradient boosting.
 I am a 10th grader in Russian school on 1st semester, so we haven't learned about *derivatives or gradients* for that matter. So I had to impovise and get knowledge myself.
 
-<img align="center" src="https://developer.ibm.com/developer/default/articles/implementing-logistic-regression-from-scratch-in-python/images/gradient_descent.png" width=250 height=23/>
+$$ \Large \theta_{t+1} = \theta_t - \eta \nabla L (f(x;\theta),y)$$
 
 ## Linear Regression
 
@@ -53,7 +53,8 @@ everything above the line - is class 1, below - class 0. Simple as! But under th
 <p align="center"> <img src="https://1394217531-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-LvBP1svpACTB1R1x_U4%2F-Lw70vAIGPfRR1AjprLi%2F-LwAVc1EdfmPMge5dlYC%2Fimage.png?alt=media&token=d72e3231-0d64-4bb7-9e4c-20577940763d"> </p>
 
 First of all, we use sigmoid activation function. Second of all, loss function is completely different. For our task, it is called `binary crossentropy`. It looks like this:
-<p align="center"> <img src="https://developer.ibm.com/developer/default/articles/implementing-logistic-regression-from-scratch-in-python/images/cross_entropy.png" width=400 height=55> </p>
+
+$$ \Large L_{CE}(y_{pred}, y) = - \frac{1}{m} \sum \limits_{i=1}^m y * log(y_{pred}) + (1-y) * log (1 - y_{pred}) $$
 
 Much harder than this, right?
 
