@@ -64,4 +64,7 @@ But getting gradients is simpler. Overall, logistic-regression implementation wa
 accuracy is rather low on `breast_cancer` dataset and model works slower than expected. It is slower, because I was trying to get the job done, not to make
 implementation better, than sklearn did.
 
+## TODO: Simple Neural Network
+
+Next model to create - Simple NN. It's an uncomplicated, trainable sets of neurons made to find most suitable effective and accurate weights and biases.
 
